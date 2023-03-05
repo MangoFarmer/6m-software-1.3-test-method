@@ -7,17 +7,23 @@
     - NLB4 -> How to be a Software Developer
 
     Tips: 
-    - Use a for loop and utilizes the index variable as a running number.
+    - Use a for loop and utilize the index variable as a running number.
     - Be sure got use google!
 */
 
 const bookIdArr = ["NLB1", "NLB2", "NLB3", "NLB4"];
 const bookTitle = ["Lord of the Rings", "Programming for Dummies", "Introduction to Software Testing", "How to be a Software Developer"];
-let booksObj = {}; 
 
-function convert(keyArr, valueArr){
+let booksObj = {};
+
+const convert = () => {
+    bookIdArr.forEach((keyArr, valueArr) => { 
+        booksObj[keyArr] = bookTitle[valueArr]}) 
+        return booksObj; 
+}
+console.log(convert(keyArr, valueArr));    	 
     
-    // Add code here
+   
     /*
         Tips:
         - Step 1: Create a local scoped object literal.
@@ -25,7 +31,7 @@ function convert(keyArr, valueArr){
         - Step 3: Within the for-loop, add the key and value to the local scoped object.
         - Step 4: Write a return statement to return the object literal after the for-loop code block.
     */
-}
+
 
 function printByKey(key){
     console.log(booksObj[key]);
